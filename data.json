@@ -1,0 +1,44 @@
+{
+  "age": {
+    "14": 10,
+    "21": 15,
+    "31": 20,
+    "46": 10
+  },
+  "height": {
+    "149": 15,
+    "151": 20,
+    "161": 25,
+    "181": 10
+  },
+  "haircolor": {
+    "blonde": 10,
+    "red": 9,
+    "black": 1,
+    "brown": 2
+  },
+  "hairlength": {
+    "long": 5,
+    "midle": 6,
+    "short": 1
+  },
+  "eyecolor": {
+    "blue": 10,
+    "green": 15,
+    "brown": 5,
+    "grey": 5
+  },
+  "boob": {
+    "small": 5,
+    "medium": 10,
+    "big": 15,
+    "huge": 5
+  },
+  "figure": {
+    "thin": 4,
+    "sporty": 15,
+    "normal": 9,
+    "chubby": 0,
+    "fat": 1
+  }
+}
