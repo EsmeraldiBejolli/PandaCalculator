@@ -1,0 +1,162 @@
+/// <reference path="variables.less" />
+
+
+
+.animation(@properties) {
+    -moz-animation: ~"@{properties}";
+    -o-animation: ~"@{properties}";
+    -webkit-animation: ~"@{properties}";
+    animation: ~"@{properties}";
+}
+
+.appearance-reset() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+
+
+// REVISIT - Remove this
+.box-sizing (@type: border-box) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing: @type;
+    box-sizing: @type;
+}
+
+// See http://stackoverflow.com/questions/11540728/what-is-the-effect-of-content-0020-property
+.clear() {
+    &:after {
+        content: '\0020';
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+/*
+ * See htmlboilerplate
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear-inline-block-whitespace() {
+    margin-top: -0.5em;
+}
+
+.horizontal-align() {
+    position: relative;
+    left: 50%;
+    .transform(translateX(-50%));
+}
+
+.reset-listing-style() {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+}
+
+
+
+.transform(@value) {
+    -moz-transform: @value;
+    -ms-transform: @value;
+    -o-transform: @value;
+    -webkit-transform: @value;
+    transform: @value;
+}
+
+.transform-origin(@value) {
+    -webkit-transform-origin: @value;
+    -ms-transform-origin: @value;
+    transform-origin: @value;
+}
+
+.transition(@value) {
+    -moz-transition: @value;
+    -o-transition: @value;
+    -webkit-transition: @value;
+    transition: @value;
+}
+
+.transition-delay(@value) {
+    -moz-transition-delay: @value;
+    -o-transition-delay: @value;
+    -webkit-transition-delay: @value;
+    transition-delay: @value;
+}
+
+.vertical-align() {
+    position: relative;
+    top: 50%;
+    .transform(translateY(-50%));
+}
+
+.hamburger-menu() {
+	
+	label {
+		cursor: pointer;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 999;
+	}
+	
+	 span {
+			display: block;
+			width: 33px;
+			height: 4px;
+			margin-bottom: 5px;
+			position: relative;
+
+			background: @white;
+			border-radius: 3px;
+
+			z-index: 1;
+
+			transform-origin: 4px 0px;
+
+			transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+									background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+									opacity 0.55s ease;
+	}
+
+	 span:first-child{
+		 transform-origin: 0% 0%;
+	 }
+
+	span:nth-last-child(2) {
+		 transform-origin: 0% 100%;
+	}
+
+}
+
+.absolute-vertical-align() {
+    position: absolute;
+    top: 50%;
+    .transform(translateY(-50%));
+}

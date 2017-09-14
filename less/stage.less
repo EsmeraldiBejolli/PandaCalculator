@@ -1,0 +1,40 @@
+﻿.stage {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+
+    h1 {
+        .absolute-vertical-align();
+        color: #FF0042;
+        font-size: 4rem;
+        text-align: center;
+        width: 100%;
+        z-index: 99;
+    }
+
+    img {
+        position: relative;
+        top: -150px;
+    }
+}
+
+@media all and (min-width: @desktop) {
+    .stage {
+        max-width: 1280px;
+    }
+}
+
+@media all and (max-width: @tablet) {
+    .stage {
+        height: 250px;
+
+        h1 {
+            font-size: 1.2em;
+        }
+
+        img {
+            top: 0;
+        }
+    }
+}
