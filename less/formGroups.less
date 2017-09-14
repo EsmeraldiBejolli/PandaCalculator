@@ -1,0 +1,152 @@
+﻿.form-group-contoller {
+    .clear();
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+
+    + .form-group-contoller {
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .form-input-group {
+        display: flex;
+        font-size: 0;
+
+        label {
+            .border-radius(20px);
+            .transition(all .4s ease-in-out);
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1;
+            cursor: pointer;
+            box-sizing: border-box;
+            border: 1px solid #FF0042;
+            font-size: 70px;
+            height: 8rem;
+            display: inline-block;
+            padding: 20px;
+            vertical-align: middle;
+            text-align: center;
+
+            & ~ label {
+                margin-left: 20px;
+            }
+
+            &:hover {
+                color: white;
+                background-color: @main-color;
+            }
+        }
+
+        input:checked + label {
+            background-color: @main-color;
+            color: white;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        select {
+            .box-sizing();
+            .border-radius(4px);
+            border: 1px solid @main-color;
+            cursor: pointer;
+            outline: none;
+            font-size: 18px;
+            padding: 8px;
+            width: 100%;
+        }
+
+        .icon-eye {
+            &.blue {
+                color: #75B6DB;
+            }
+
+            &.green {
+                color: #7DAA41;
+            }
+
+            &.brown {
+                color: #A5791A;
+            }
+
+            &.grey {
+                color: #848478;
+            }
+
+            &:before {
+                position: relative;
+                top: 15px;
+            }
+        }
+
+        .icon-boobs {
+            &.small {
+                font-size: 50px;
+            }
+
+            &.midle {
+                font-size: 85px;
+            }
+
+            &.large {
+                font-size: 120px;
+            }
+        }
+
+        .icon-hair {
+            color: #844432;
+        }
+    }
+
+    .form-label,
+    .form-input-group {
+        position: relative;
+    }
+}
+
+@media all and (min-width:680px) {
+    .form-label {
+        .column(6);
+    }
+
+    .form-input-group {
+        .column(10);
+    }
+}
+
+@media all and (max-width:680px) {
+    .form-group-contoller {
+
+        .form-input-group {
+            margin-top: 20px;
+
+            label {
+                font-size: 40px;
+                height: 4.5rem;
+                padding: 12px;
+                width: 4.5rem;
+            }
+
+            .icon-eye:before {
+                top: 7px;
+            }
+
+            .icon-boobs {
+                &.large {
+                    font-size: 80px;
+                }
+
+                &.midle {
+                    font-size: 65px;
+                }
+            }
+        }
+    }
+
+    select {
+        .appearance-reset();
+    }
+}
