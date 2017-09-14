@@ -54,7 +54,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-typescript');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-copy-files');
     grunt.loadNpmTasks('grunt-contrib-watch');;
 
     grunt.file.setBase(__dirname);
