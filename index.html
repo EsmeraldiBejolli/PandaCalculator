@@ -13,9 +13,112 @@
         <h1>How many Pandas for your girlfriend?</h1>
     </section>
     <main>
+        <form action="#">
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Age</h3>
+                    <output name="age-result" id="ageresult">20</output>
+                </div>
+                <div class="form-input-group">
+                    <div class="fill" id="range-fill"></div>
+                    <input name="age" type="range" min="15" max="70" id="ageinput" value="20" oninput="ageresult.value = ageinput.value" />
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Height(cm)</h3>
+                    <output name="height-result" id="heightresult">165</output>
+                </div>
+                <div class="form-input-group">
+                    <input name="height" type="range" min="140" value="165" id="heightinput" max="220" oninput="heightresult.value = heightinput.value">
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Haircolor</h3>
+                </div>
+                <div class="form-input-group">
+                    <select name="haircolor">
+                        <option value="blonde">blonde</option>
+                        <option value="brown">brown</option>
+                        <option value="black">black</option>
+                        <option value="red">red</option>
+                        <option value="grey">grey</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Hair length</h3>
+                </div>
+                <div class="form-input-group">
+                    <input type="radio" name="hairlength" value="long" id="long" checked="checked">
+                    <label for="long" class="icon-long-hair icon-hair">
+                    </label>
 
+                    <input type="radio" name="hairlength" value="medium" id="medium">
+                    <label for="medium" class="icon-normal-hair icon-hair">
+                    </label>
 
-        <form action="#"></form>
+                    <input type="radio" name="hairlength" value="short" id="short">
+                    <label for="short" class="icon-short-hair icon-hair">
+                    </label>
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Eye Color</h3>
+                </div>
+                <div class="form-input-group">
+                    <input type="radio" name="eyecolor" id="eye-blue" value="blue">
+                    <label class="radio icon-eye blue" for="eye-blue"></label>
+                    <input type="radio" name="eyecolor" id="eye-green" value="green">
+                    <label class="inline-radio icon-eye green" for="eye-green"></label>
+                    <input type="radio" name="eyecolor" id="eye-brown" value="brown" checked="checked">
+                    <label class="inline-radio icon-eye brown" for="eye-brown"></label>
+                    <input type="radio" name="eyecolor" id="eye-grey" value="grey">
+                    <label class="inline-radio icon-eye grey" id="eye-grey"></label>
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Boob Size</h3>
+                </div>
+                <div class="form-input-group">
+                    <input type="radio" name="boob" value="small" id="b-small" checked="checked">
+                    <label for="b-small" class="icon-boobs small">
+
+                    </label>
+
+                    <input type="radio" name="boob" value="middle" id="b-middle">
+                    <label for="b-middle" class="icon-boobs midle">
+
+                    </label>
+
+                    <input type="radio" name="boob" value="large" id="b-large">
+                    <label for="b-large" class="icon-boobs large">
+
+                    </label>
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <div class="form-label">
+                    <h3>Figure</h3>
+                </div>
+                <div class="form-input-group">
+                    <select name="figure">
+                        <option value="thin">thin</option>
+                        <option value="sporty">sporty</option>
+                        <option value="normal">normal</option>
+                        <option value="chubby">chubby</option>
+                        <option value="fat">fat</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group-contoller">
+                <button type="submit" class="button-submit">calculate</button>
+            </div>
+        </form>
 
     </main>
 
